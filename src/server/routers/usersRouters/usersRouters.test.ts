@@ -26,6 +26,8 @@ describe("Given a POST '/users/login' endpoint", () => {
   const mockUser: UserStructure = {
     username: "Diana",
     password: "12345678",
+    email: "",
+    avatar: "",
   };
 
   const fakeUser = {
