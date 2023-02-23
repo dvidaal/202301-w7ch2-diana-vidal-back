@@ -6,13 +6,12 @@ import {
 import multer from "multer";
 
 const usersRouter = Router();
-
 const storage = multer.diskStorage({
   destination(req, file, callback) {
-    callback(null, "/uploads");
+    callback(null, "uploads/");
   },
   filename(req, file, callback) {
-    callback(null, file.filename + "jpeg");
+    callback(null, file.originalname + ".jpg");
   },
 });
 export const upload = multer({ storage });
