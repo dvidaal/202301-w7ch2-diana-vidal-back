@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
     callback(null, "uploads/");
   },
   filename(req, file, callback) {
-    callback(null, file.originalname + ".jpg");
+    callback(null, file.originalname);
   },
 });
 export const upload = multer({ storage });
